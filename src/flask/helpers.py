@@ -30,7 +30,7 @@ def get_debug_flag() -> bool:
     :envvar:`FLASK_DEBUG` environment variable. The default is ``False``.
     """
     val = os.environ.get("FLASK_DEBUG")
-    return bool(val and val.lower() not in {"0", "false", "no"})
+    return bool(val and val.lower() not in {"0", "false", "no", "off"})
 
 
 def get_load_dotenv(default: bool = True) -> bool:
